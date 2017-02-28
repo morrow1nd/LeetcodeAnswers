@@ -26,6 +26,11 @@ public:
 
 private:
     /* copy from https://discuss.leetcode.com/topic/65944/c-solution-o-1-space */
+    /*
+        这个解法是把nums里的元素当成一种tag，标记为负号之后就说明此处索引对应的数字是存在的。
+
+        nums里的元素存放了两种信息，一种是原来的数值，另一种是此处索引对应的值存不存在。
+    */
     vector<int> __findDisappearedNumbers(vector<int>& nums) {
         int len = nums.size();
         for(int i=0; i<len; i++) {
